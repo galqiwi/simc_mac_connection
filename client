@@ -11,5 +11,6 @@ ssh-copy-id simc
 
 ssh simc 'rm -rf /home/simc/tex'
 scp -r ./ simc:/home/simc/tex
-ssh simc 'cd /home/simc/tex; pdflatex main.tex;'
+ssh simc 'cd /home/simc/tex; pdflatex main.tex; if [ -e ./main.pdf ]; then cp ./main.pdf /home/galqiwi/last_mac.pdf; fi'
+
 scp simc:/home/simc/tex/main.pdf ./

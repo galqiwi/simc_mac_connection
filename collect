@@ -1,0 +1,4 @@
+#!/bin/bash
+#collects main.pdf from last mac compile
+
+scp simc:/home/simc/last_mac.pdf ./
